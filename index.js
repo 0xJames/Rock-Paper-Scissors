@@ -41,14 +41,14 @@ function getComputerChoice(){
 function game(){
     playerPoint = 0
     comPoint = 0
-    for (let i=0; i<5; i++){
+    /*for (let i=0; i<5; i++){
         let pSelection = prompt("make your choice!")
         //console.log(pSelection)
         let comSelection = getComputerChoice()
         //console.log(comSelection)
         playRound(pSelection,comSelection)
         console.log(playerPoint, comPoint)
-    }
+    }*/
     if (playerPoint > comPoint){
         console.log("You win!")
     }
@@ -61,12 +61,24 @@ function game(){
 
 }
 
+const container = document.querySelector("#container")
+const buttons = document.createElement("div")
+buttons.classList.add("buttons")
+container.appendChild(buttons)
 
-/*function game(){
-    for (let i =0; i<5;i++){
-        let playerSelection = prompt("Make your selection!");
-        let computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection)
-        console.log(playRound())
-    }
-} */
+
+const rockButton = document.createElement("button")
+const paperButton = document.createElement("button")
+const ScissorsButton = document.createElement("button")
+buttons.appendChild(rockButton)
+buttons.appendChild(paperButton)
+buttons.appendChild(ScissorsButton)
+
+buttons.style.backgroundColor ="pink"
+
+let allButtons = document.getElementsByTagName("button")
+allButtons.style.backgroundColor="black"  //only can select 1 but not all the elements, better off doing styling in CSS if page not dynamic.
+                                        // would have to iterate over nodelist to achieve it in js file. 
+
+
+//document.querySelector("#container").appendChild(buttonDiv)
