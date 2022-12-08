@@ -13,4 +13,5 @@ button{
 
 #results {
     background-color: aqua;
+    white-space: pre;
 }

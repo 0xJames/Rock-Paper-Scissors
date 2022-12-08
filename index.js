@@ -34,36 +34,35 @@ function getComputerChoice(){
             comPoint+= 1
             
         }
-    console.log(playerPoint, comPoint)
+    //console.log(playerPoint, comPoint)
+    let scoreString =`
+                        Your Score: ${playerPoint}                            
+                         
+
+                        Computer's Score: ${comPoint}`
+    document.getElementById("results").textContent = scoreString
     
-}
-
-function game(){
-    playerPoint = 0
-    comPoint = 0
-    /*for (let i=0; i<5; i++){
-        let pSelection = prompt("make your choice!")
-        //console.log(pSelection)
-        let comSelection = getComputerChoice()
-        //console.log(comSelection)
-        playRound(pSelection,comSelection)
-        console.log(playerPoint, comPoint)
-    }*/
-    if (playerPoint > comPoint){
-        console.log("You win!")
+    if (playerPoint == 5){
+        alert("you won!")
+        location.reload()
     }
-        else if (playerPoint == comPoint){
-            console.log("It's a TIE!")
-        }
-        else  {
-            console.log("Bummer!")
-        }
 
+    if (comPoint == 5){
+        alert("you lost!")
+        location.reload()
+    }
 }
+
 
 document.getElementById("rock").addEventListener("click", ()=> {playRound("Rock",getComputerChoice())})
 document.getElementById("paper").addEventListener("click", ()=> {playRound("Paper",getComputerChoice())})
 document.getElementById("scissors").addEventListener("click", ()=> {playRound("scissors",getComputerChoice())})
+
+if (playerPoint == 5){
+    alert("you win!")
+    playerPoint=0
+    comPoint=0
+}
 
 /*const container = document.querySelector("#container")
 const buttons = document.createElement("div")
