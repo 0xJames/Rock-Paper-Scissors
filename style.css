@@ -1,0 +1,16 @@
+div {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: pink;
+    padding:100px
+}
+
+button{
+    padding:30px;
+    border-radius: 16px;
+    background-color:white
+}
+
+#results {
+    background-color: aqua;
+}

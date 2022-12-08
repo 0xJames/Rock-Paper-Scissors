@@ -34,7 +34,7 @@ function getComputerChoice(){
             comPoint+= 1
             
         }
-    //console.log(playerPoint, comPoint)
+    console.log(playerPoint, comPoint)
     
 }
 
@@ -61,7 +61,11 @@ function game(){
 
 }
 
-const container = document.querySelector("#container")
+document.getElementById("rock").addEventListener("click", ()=> {playRound("Rock",getComputerChoice())})
+document.getElementById("paper").addEventListener("click", ()=> {playRound("Paper",getComputerChoice())})
+document.getElementById("scissors").addEventListener("click", ()=> {playRound("scissors",getComputerChoice())})
+
+/*const container = document.querySelector("#container")
 const buttons = document.createElement("div")
 buttons.classList.add("buttons")
 container.appendChild(buttons)
@@ -82,3 +86,4 @@ allButtons.style.backgroundColor="black"  //only can select 1 but not all the el
 
 
 //document.querySelector("#container").appendChild(buttonDiv)
+*/
